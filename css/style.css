@@ -1,0 +1,50 @@
+/* Custom styles for the project website */
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+section {
+    padding: 80px 0; /* Increased padding for bigger sections */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Image gallery styles */
+.image-gallery img {
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.simulation-placeholder {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
