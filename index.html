@@ -30,8 +30,8 @@
 
     <header id="home" class="hero bg-primary text-white text-center py-5">
         <div class="container py-5">
-            <h1 class="display-4 fw-bold">Filament Spool Re-wind Machine</h1>
-            <p class="lead">Advanced Design Engineering Project 202 - Semester 2</p>
+            <h1 class="display-4 fw-bold">Filament-Spool Re-wind Machine [cite: 694]</h1>
+            <p class="lead">Design Engineering Project 202 - ATU Sligo</p>
         </div>
     </header>
 
@@ -40,15 +40,16 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <h2 class="fw-bold">Project Objectives</h2>
-                    <p>This project involves the continued development of a 3D printer filament unwind/wind machine, transitioning the design from initial prototype to a manufacturing-ready retail product. The primary focus is on mechanical reliability, regulatory compliance, and enhanced user experience.</p>
+                    <p>This project focuses on the development of a Filament-Spool Re-wind Machine, transitioning the design into a highly functional, safe, and sustainable product. Our primary focus is on mechanical reliability, user inclusivity, and eco-friendly manufacturing[cite: 46, 338, 709].</p>
                     <ul class="list-group list-group-flush border rounded">
-                        <li class="list-group-item"><strong>Automation:</strong> Automated determination of spool status (full/empty).</li>
-                        <li class="list-group-item"><strong>Inclusivity:</strong> Implementation of a vertically adjustable mechanism to suit individual user height requirements.</li>
-                        <li class="list-group-item"><strong>Storage:</strong> Integration of a portable workbench capable of segregating four full and four empty spools.</li>
+                        <li class="list-group-item"><strong>Automation & Safety:</strong> Integrated sensors and a mechanical limit switch to ensure the spool is properly seated before the motor can operate[cite: 360, 362].</li>
+                        <li class="list-group-item"><strong>Inclusivity (DEI):</strong> Tool-less spool changing system and clear color-coded controls to accommodate users of all experience levels and physical abilities[cite: 338, 346].</li>
+                        <li class="list-group-item"><strong>Ergonomic Table:</strong> An adjustable height workbench to suit different users, complete with secure storage for 4 full and 4 empty filament spools[cite: 504, 507].</li>
                     </ul>
                 </div>
                 <div class="col-lg-5 text-center">
-                    <img src="images/image table.avif" alt="Assembly Overview" class="img-fluid rounded shadow-sm">
+                    <img src="images/table-assembly.jpg" alt="Adjustable Workbench Overview" class="img-fluid rounded shadow-sm">
+                    <p class="small text-muted mt-2">Replace with: The CAD render of the adjustable table with the machine on top.</p>
                 </div>
             </div>
         </div>
@@ -60,20 +61,20 @@
             <div class="row g-4">
                 <div class="col-md-4 text-start">
                     <div class="p-4 shadow-sm bg-white rounded h-100">
-                        <h5 class="fw-bold text-primary">Compliance & Standards</h5>
-                        <p class="small">Detailed review of relevant regulatory standards and directives to ensure commercial viability and safety.</p>
+                        <h5 class="fw-bold text-primary">Sustainability (Goal 12) [cite: 45]</h5>
+                        <p class="small">We optimized our 3D printed parts to reduce filament use and utilized laser-cutting for flat components (gears/connecting rods) to reduce material waste and energy consumption[cite: 49, 50, 51]. We selected recyclable thermoplastics like PLA and PETG[cite: 55].</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-start">
                     <div class="p-4 shadow-sm bg-white rounded h-100">
-                        <h5 class="fw-bold text-primary">DFMA & Reliability</h5>
-                        <p class="small">Application of Design for Manufacture, Assembly, Reliability, and Maintenance (DFM/DFA) principles.</p>
+                        <h5 class="fw-bold text-primary">DFMA & Manufacturability</h5>
+                        <p class="small">The design uses bolts instead of adhesives, allowing for easy disassembly, maintenance, and part replacement[cite: 53]. Bearings and springs can be replaced individually without discarding the whole system[cite: 54].</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-start">
                     <div class="p-4 shadow-sm bg-white rounded h-100">
-                        <h5 class="fw-bold text-primary">Sustainability</h5>
-                        <p class="small">Strategic selection of components and materials to minimize environmental impact during the product lifecycle.</p>
+                        <h5 class="fw-bold text-primary">Safety Integration</h5>
+                        <p class="small">A physical safety guard shield was designed to cover the top gears[cite: 541]. An infrared sensor monitors the filament path, and automation prevents snapping or overloading without human supervision[cite: 371, 379].</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +89,9 @@
                     <div class="card h-100 border-0 shadow-sm bg-light">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Primary Drive System</h5>
-                            <p class="card-text small">The system utilizes a single Oriental Motor 25W AC induction motor with a 120:1 reduction gearhead for high-torque delivery.</p>
+                            <p class="card-text small">The reciprocating mechanism is powered by an RS PRO 12V DC brushed geared motor, outputting 79 rpm with a maximum torque of 6000 g.cm[cite: 752, 754, 762]. A custom Nema 23 Stepper motor is utilized for the table mechanism[cite: 786].</p>
+                            <img src="images/motor-testing.jpg" alt="Motor Testing" class="img-fluid rounded mt-3">
+                            <p class="small text-muted mt-2">Replace with: The picture of the motor attached to the red perforated board.</p>
                         </div>
                     </div>
                 </div>
@@ -96,7 +99,9 @@
                     <div class="card h-100 border-0 shadow-sm bg-light">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Control & Feedback</h5>
-                            <p class="card-text small">Implementation of low-voltage electrical devices for automated process monitoring and status signaling.</p>
+                            <p class="card-text small">We developed custom Arduino software and circuitry to control the motor. The board includes an enable push button, status indicator LEDs, a potentiometer for speed control, an ultrasonic sensor, and a MOSFET/diode setup for motor safety[cite: 402, 403].</p>
+                            <img src="images/arduino-wiring.jpg" alt="Arduino Wiring" class="img-fluid rounded mt-3">
+                            <p class="small text-muted mt-2">Replace with: The photo of the Arduino Uno, breadboard, LEDs, and wiring.</p>
                         </div>
                     </div>
                 </div>
@@ -106,15 +111,15 @@
 
     <section id="simulation" class="bg-light py-5">
         <div class="container">
-            <h2 class="fw-bold text-center mb-4">Virtual Testing & Simulation</h2>
+            <h2 class="fw-bold text-center mb-4">Virtual Testing & FEA Simulation</h2>
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p>Virtual testing is employed to ensure mechanism effectiveness prior to physical assembly. Our analysis includes kinematic validation and CAD integration.</p>
+                    <p>To ensure structural integrity before manufacturing, we conducted comprehensive Finite Element Analysis (FEA) using ANSYS. We performed a static structural analysis on the core components, including the custom segmented gear/rail and the cantilever shaft[cite: 702, 733, 806].</p>
+                    <p>Our simulations compared PLA against Structural Steel for a 50 mm cantilever shaft assembly subjected to a 700 N load[cite: 821, 843, 844]. The results allowed us to iterate the design, proving a max Von Mises stress of 7.15 MPa and validating our hand calculations[cite: 883, 964].</p>
                 </div>
                 <div class="col-md-6 text-center">
-                    <div class="border rounded bg-white p-4 shadow-sm">
-                        <p class="text-muted small mb-0">[Simulation Analysis Placeholder]</p>
-                    </div>
+                    <img src="images/ansys-simulation.jpg" alt="ANSYS FEA Simulation" class="img-fluid rounded shadow-sm">
+                    <p class="small text-muted mt-2">Replace with: One of the colorful ANSYS stress simulation screenshots (e.g., the blue/green gear simulation).</p>
                 </div>
             </div>
         </div>
@@ -127,19 +132,19 @@
                 <div class="col-md-4">
                     <div class="p-4 border rounded bg-light h-100">
                         <h6>Physical Mechanism</h6>
-                        <p class="text-muted small">Scalable prototype of the re-wind mechanism.</p>
+                        <p class="text-muted small">Combining 3D printed components with laser-cut plates (PMMA/Acrylic) significantly improved production time and accuracy while reducing material waste[cite: 530, 531, 659].</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 border rounded bg-light h-100">
-                        <h6>3D CAD Assembly</h6>
-                        <p class="text-muted small">Full virtual model of the final machine design.</p>
+                        <h6>Tension Control</h6>
+                        <p class="text-muted small">A dedicated filament tension control mechanism utilizes Igus bearings (BB-604-B180-30-ES) and custom 3D printed springs for optimal performance[cite: 135, 239].</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 border rounded bg-light h-100">
-                        <h6>Extended Reality (XR)</h6>
-                        <p class="text-muted small">Interactive model for the Engineering Expo.</p>
+                        <h6>ATU Makerspace [cite: 427]</h6>
+                        <p class="text-muted small">Iterative testing and fabrication were heavily supported by the ATU Makerspace equipment, allowing us to test and fix gear alignment issues swiftly[cite: 312, 544].</p>
                     </div>
                 </div>
             </div>
@@ -148,28 +153,25 @@
 
     <section id="team" class="py-5 bg-dark text-white">
         <div class="container">
-            <h2 class="fw-bold text-center mb-5">Project Team</h2>
+            <h2 class="fw-bold text-center mb-5">Project Team [cite: 695]</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4 text-center">
-                    <img src="images/team1.jpg" alt="Team Member 1" class="img-fluid rounded-circle mb-3 border border-primary border-3" style="width: 140px; height: 140px; object-fit: cover;">
-                    <h5 class="fw-bold">Team Member 1</h5>
-                    <p class="small text-muted">Lead Designer</p>
-                    <p class="small px-3">Expert in CAD modeling and kinematic analysis for mechanical systems.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">LinkedIn</a>
+                    <img src="images/hubert.jpg" alt="Hubert Kaminski" class="img-fluid rounded-circle mb-3 border border-primary border-3" style="width: 140px; height: 140px; object-fit: cover;">
+                    <h5 class="fw-bold">Hubert Kaminski</h5>
+                    <p class="small text-muted">Mechanical & Simulation Lead</p>
+                    <p class="small px-3">Expert in CAD modeling, ANSYS static structural simulations, and generating the final FEA reports[cite: 608, 627, 702].</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="images/team2.jpg" alt="Team Member 2" class="img-fluid rounded-circle mb-3 border border-primary border-3" style="width: 140px; height: 140px; object-fit: cover;">
-                    <h5 class="fw-bold">Team Member 2</h5>
-                    <p class="small text-muted">Systems Engineer</p>
-                    <p class="small px-3">Focused on automation, electronic sensors, and motor integration.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">LinkedIn</a>
+                    <img src="images/julian.jpg" alt="Julian Kaminski" class="img-fluid rounded-circle mb-3 border border-primary border-3" style="width: 140px; height: 140px; object-fit: cover;">
+                    <h5 class="fw-bold">Julian Kaminski</h5>
+                    <p class="small text-muted">Design & Ergonomics Lead</p>
+                    <p class="small px-3">Focused on the adjustable workbench design, micro:bit integration, and overall project scheduling[cite: 504, 698, 876].</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="images/team3.jpg" alt="Team Member 3" class="img-fluid rounded-circle mb-3 border border-primary border-3" style="width: 140px; height: 140px; object-fit: cover;">
-                    <h5 class="fw-bold">Team Member 3</h5>
-                    <p class="small text-muted">Technical Lead</p>
-                    <p class="small px-3">Specialized in DFMA principles and regulatory compliance standards.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">LinkedIn</a>
+                    <img src="images/sip.jpg" alt="Sip Beckmann" class="img-fluid rounded-circle mb-3 border border-primary border-3" style="width: 140px; height: 140px; object-fit: cover;">
+                    <h5 class="fw-bold">Sip Beckmann</h5>
+                    <p class="small text-muted">Systems & Web Lead</p>
+                    <p class="small px-3">Specialized in Arduino software programming, sensor integration, component fabrication, and website deployment[cite: 401, 921, 939].</p>
                 </div>
             </div>
         </div>
@@ -178,7 +180,7 @@
     <footer class="bg-white text-dark text-center py-4">
         <div class="container">
             <div class="mb-3">
-                <img src="ATU-Logo-Full-RGB-Green.jpg" alt="ATU Logo" style="height: 50px; width: auto;">
+                <img src="images/ATU-Logo.jpg" alt="ATU Logo" style="height: 50px; width: auto;">
             </div>
             <p class="mb-0 small fw-bold">Atlantic Technological University | Sligo</p>
             <p class="text-muted small">Design Engineering Project 202 | Academic Year 2025-26</p>
