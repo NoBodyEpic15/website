@@ -6,6 +6,8 @@
     <title>Project Website - Tech Expo Poster</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -28,28 +30,52 @@
         </div>
     </nav>
 
-    <header id="home" class="hero bg-primary text-white text-center py-5">
+<header id="home" class="hero bg-dark text-white py-5 shadow-lg">
         <div class="container py-5">
-            <h1 class="display-4 fw-bold">Filament-Spool Re-wind Machine</h1>
-            <p class="lead">Design Engineering Project 202 - ATU Sligo</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-start">
+                    <h1 class="display-3 fw-bold text-primary">Filament-Spool Re-wind Machine</h1>
+                    <p class="lead mb-4">Design Engineering Project 202 - ATU Sligo</p>
+                    <p>An automated, inclusive, and sustainable solution for 3D printing material management.</p>
+                    <a href="#about" class="btn btn-primary btn-lg px-4 me-md-2">Discover Project</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/Table.png" alt="Filament Re-winder Machine Full Assembly" class="img-fluid rounded drop-shadow">
+                </div>
+            </div>
         </div>
     </header>
 
     <section id="about" class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
                     <h2 class="fw-bold">Project Objectives</h2>
-                    <p>This project focuses on the development of a Filament-Spool Re-wind Machine, transitioning the design into a highly functional, safe, and sustainable product. Our primary focus is on mechanical reliability, user inclusivity, and eco-friendly manufacturing.</p>
-                    <ul class="list-group list-group-flush border rounded">
-                        <li class="list-group-item"><strong>Automation & Safety:</strong> Integrated sensors and a mechanical limit switch to ensure the spool is properly seated before the motor can operate.</li>
-                        <li class="list-group-item"><strong>Inclusivity (DEI):</strong> Tool-less spool changing system and clear color-coded controls to accommodate users of all experience levels and physical abilities.</li>
-                        <li class="list-group-item"><strong>Ergonomic Table:</strong> An adjustable height workbench to suit different users, complete with secure storage for 4 full and 4 empty filament spools.</li>
-                    </ul>
+                    <hr class="mx-auto bg-primary" style="width: 100px; height: 3px;">
                 </div>
-                <div class="col-lg-5 text-center">
-                    <img src="images/table-assembly.jpg" alt="Adjustable Workbench Overview" class="img-fluid rounded shadow-sm">
-                    <p class="small text-muted mt-2">Replace with: The CAD render of the adjustable table with the machine on top.</p>
+                <div class="col-lg-12">
+                    <p class="text-center mb-5 lead">This project focused on the development of a Filament-Spool Re-wind Machine, transitioning the design into a highly functional, safe, and sustainable product.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                                <h5 class="fw-bold text-primary">Automation & Safety</h5>
+                                <p class="small">Integrated sensors and a mechanical limit switch to ensure the spool is properly seated before the motor can operate.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                                <h5 class="fw-bold text-primary">Inclusivity (DEI)</h5>
+                                <p class="small">Tool-less spool changing system and clear color-coded controls to accommodate users of all experience levels.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                                <h5 class="fw-bold text-primary">Ergonomic Table</h5>
+                                <p class="small">Adjustable height workbench with integrated storage for 8 spools (4 full, 4 empty).</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,45 +107,112 @@
         </div>
     </section>
 
-    <section id="development" class="py-5">
+<section id="development" class="py-5">
         <div class="container">
-            <h2 class="fw-bold text-center mb-5">Technical Development</h2>
+            <h2 class="fw-bold text-center mb-5">Technical Development & Testing</h2>
+
+            <div class="row align-items-center mb-5 bg-white rounded shadow-sm p-4 border">
+                <div class="col-lg-7">
+                    <img src="images/arduino-wiring.avif" alt="Electrical Schematic" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-lg-5">
+                    <h4 class="fw-bold text-primary mt-3 mt-lg-0">Control & Circuitry</h4>
+                    <p>We developed a custom circuit featuring an <strong>Arduino Uno</strong>, an ultrasonic sensor for real-time distance monitoring, and a <strong>MOSFET/diode</strong> setup. This ensures safe motor modulation and protects the electronics from inductive back-EMF (voltage spikes).</p>
+                    <ul class="small list-unstyled">
+                        <li><span class="text-primary">●</span> <strong>Precision:</strong> Potentiometer for variable speed control.</li>
+                        <li><span class="text-primary">●</span> <strong>Safety:</strong> Flyback diode integrated for motor protection.</li>
+                        <li><span class="text-primary">●</span> <strong>Feedback:</strong> LED status indicators for system state.</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm bg-light">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Primary Drive System</h5>
-                            <p class="card-text small">The reciprocating mechanism is powered by an RS PRO 12V DC brushed geared motor, outputting 79 rpm with a maximum torque of 6000 g.cm. A custom Nema 23 Stepper motor is utilized for the table mechanism.</p>
-                            <img src="images/motor-testing.jpg" alt="Motor Testing" class="img-fluid rounded mt-3">
-                            <p class="small text-muted mt-2">Replace with: The picture of the motor attached to the red perforated board.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm bg-light">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Control & Feedback</h5>
-                            <p class="card-text small">We developed custom Arduino software and circuitry to control the motor. The board includes an enable push button, status indicator LEDs, a potentiometer for speed control, an ultrasonic sensor, and a MOSFET/diode setup for motor safety.</p>
-                            <img src="images/arduino-wiring.jpg" alt="Arduino Wiring" class="img-fluid rounded mt-3">
-                            <p class="small text-muted mt-2">Replace with: The photo of the Arduino Uno, breadboard, LEDs, and wiring.</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="bg-white p-4 rounded shadow-sm h-100 text-center border">
+        <h5 class="fw-bold mb-3">Primary Drive System</h5>
+        <div class="ratio ratio-4x3" style="cursor: pointer;" onclick="document.getElementById('motorVid').play();">
+            <video id="motorVid" muted playsinline loop 
+                   class="rounded" 
+                   style="object-fit: contain; background-color: #000;">
+                <source src="images/IMG_7209.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="small mt-3 mb-0">The reciprocating mechanism in action.</p>
+        <p class="small text-muted mt-2"><strong>(Tap to play)</strong></p>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="bg-white p-4 rounded shadow-sm h-100 text-center border">
+        <h5 class="fw-bold mb-3">System Validation</h5>
+        <div class="ratio ratio-4x3" style="cursor: pointer;" onclick="document.getElementById('ledVid').play();">
+            <video id="ledVid" muted playsinline loop 
+                   class="rounded" 
+                   style="object-fit: contain; background-color: #000;">
+                <source src="images/IMG_7100.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="small mt-3 mb-0">Logic verification using an LED.</p>
+        <p class="small text-muted mt-2"><strong>(Tap to play)</strong></p>
+    </div>
+</div>
             </div>
         </div>
     </section>
 
-    <section id="simulation" class="bg-light py-5">
+<section id="simulation" class="bg-light py-5">
         <div class="container">
-            <h2 class="fw-bold text-center mb-4">Virtual Testing & FEA Simulation</h2>
-            <div class="row align-items-center">
+            <h2 class="fw-bold text-center mb-5">Virtual Testing & FEA Simulation</h2>
+            
+            <div class="row align-items-center mb-5 pb-4 border-bottom">
                 <div class="col-md-6">
-                    <p>To ensure structural integrity before manufacturing, we conducted comprehensive Finite Element Analysis (FEA) using ANSYS. We performed a static structural analysis on the core components, including the custom segmented gear/rail and the cantilever shaft.</p>
-                    <p>Our simulations compared PLA against Structural Steel for a 50 mm cantilever shaft assembly subjected to a 700 N load. The results allowed us to iterate the design, proving a max Von Mises stress of 7.15 MPa and validating our hand calculations.</p>
+                    <h4 class="fw-bold text-primary">Gear & Rail Assembly — FEA</h4>
+                    <p class="small">
+                        To verify the structural integrity of the reciprocating filament guide assembly, a static structural analysis was carried out in ANSYS on the gear and rail components. The mesh comprised <strong>95,309 nodes</strong> and <strong>19,845 elements</strong>.
+                    </p>
+                    <p class="small">
+                        Under the applied loading conditions, the maximum total deformation recorded was just <strong>\( 7.614 \times 10^{-3} \) mm</strong> — negligible relative to the component dimensions. Peak shear stress reached 0.342 MPa, well within the elastic limits. The safety factor was reported at the ANSYS solver cap of <strong>15</strong>, confirming a substantial margin against failure.
+                    </p>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="images/ansys-simulation.jpg" alt="ANSYS FEA Simulation" class="img-fluid rounded shadow-sm">
-                    <p class="small text-muted mt-2">Replace with: One of the colorful ANSYS stress simulation screenshots (e.g., the blue/green gear simulation).</p>
+                    <video autoplay loop muted playsinline class="img-fluid rounded shadow-sm">
+                        <source src="images/gif-gear-top.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 pb-4 border-bottom flex-md-row-reverse">
+                <div class="col-md-6">
+                    <h4 class="fw-bold text-primary">Worm Gear — FEA</h4>
+                    <p class="small">
+                        A separate static structural simulation was run on the worm gear assembly using a mesh of 30,278 nodes and 16,434 elements. The peak von Mises stress recorded was just <strong>0.033 MPa</strong> — orders of magnitude below the yield strength of any standard engineering material. 
+                    </p>
+                    <p class="small">
+                        Maximum deformation was <strong>\( 3.035 \times 10^{-4} \) mm</strong> (approx. 0.304 µm). The safety factor was capped at 15 across all nodes, meaning the structure is significantly over-designed relative to the load case analysed.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <video autoplay loop muted playsinline class="img-fluid rounded shadow-sm">
+                        <source src="images/gif-gear-helix.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4 class="fw-bold text-primary">Cantilever Shaft — FEA & Hand Calc</h4>
+                    <p class="small">
+                        The shaft (50 mm diameter) was loaded with a conservative <strong>700 N downward tip load</strong> — representative of a person leaning on the assembly. Hand calculations \( \sigma = \frac{M \cdot c}{I} \) predicted a bending stress of <strong>6.50 MPa</strong>.
+                    </p>
+                    <p class="small">
+                        ANSYS returned 7.15 MPa for PLA, showing a satisfactory 10% agreement with hand calculations. While PLA has a safety factor of 3.79, <strong>Structural Steel</strong> was chosen as the final material to minimize tip deflection (66x less than PLA) and ensure an "indestructible" safety factor of 38.5.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <video autoplay loop muted playsinline class="img-fluid rounded shadow-sm">
+                        <source src="images/gif-shaft.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
@@ -183,7 +276,7 @@
     <footer class="bg-white text-dark text-center py-4">
         <div class="container">
             <div class="mb-3">
-                <img src="images/ATU-Logo.jpg" alt="ATU Logo" style="height: 50px; width: auto;">
+                <img src="images/ATU-Logo-Full-RGB-Green.jpg" alt="ATU Logo" style="height: 50px; width: auto;">
             </div>
             <p class="mb-0 small fw-bold">Atlantic Technological University | Sligo</p>
             <p class="text-muted small">Design Engineering Project 202 | Academic Year 2025-26</p>
@@ -193,5 +286,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+    // Functie om video te starten/stoppen bij klik
+    document.getElementById('motorVid').addEventListener('click', function() {
+        if (this.paused) { this.play(); } else { this.pause(); }
+    });
+
+    document.getElementById('ledVid').addEventListener('click', function() {
+        if (this.paused) { this.play(); } else { this.pause(); }
+    });
+</script>
+
+
 </body>
 </html>

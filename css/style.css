@@ -48,3 +48,26 @@ footer {
         padding: 60px 0;
     }
 }
+
+.drop-shadow {
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
+    transition: transform 0.3s ease;
+}
+
+.drop-shadow:hover {
+    transform: scale(1.02);
+}
+
+.bg-dark {
+    background-color: #1a1a1a !important;
+}
+
+/* Verbeterde leesbaarheid voor de Hero tekst */
+.hero h1.text-primary {
+    color: #ffffff !important; /* Forceert de tekst naar wit */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Geeft een subtiele schaduw voor diepte */
+}
+
+.hero .lead, .hero p {
+    color: rgba(255, 255, 255, 0.9); /* Maakt de ondertitels bijna wit */
+}
