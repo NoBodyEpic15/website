@@ -218,26 +218,53 @@
         </div>
     </section>
 
-    <section id="prototype" class="py-5 text-center border-bottom">
+ <!-- Prototyping & Media Section -->
+    <section id="prototype" class="py-5 bg-white border-bottom">
         <div class="container">
-            <h2 class="fw-bold mb-4">Prototyping & Media</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="p-4 border rounded bg-light h-100">
-                        <h6>Physical Mechanism</h6>
-                        <p class="text-muted small">Combining 3D printed components with laser-cut plates (PMMA/Acrylic) significantly improved production time and accuracy while reducing material waste.</p>
+            <h2 class="fw-bold text-center mb-5">Prototyping & Media</h2>
+            
+            <!-- Rij 1: De twee hoofdsystemen naast elkaar -->
+            <div class="row g-4 mb-5">
+                <!-- 1. Physical Mechanism -->
+                <div class="col-md-6">
+                    <div class="p-4 border rounded shadow-sm h-100 bg-light">
+                        <img src="images/prototype model.png" alt="Physical mechanism build" class="img-fluid rounded mb-3 shadow-sm w-100" style="height: 300px; object-fit: cover;">
+                        <h5 class="fw-bold text-primary">Physical Mechanism</h5>
+                        <p class="text-muted small text-start">
+                            The assembly combines 3D printed internal gears with <strong>laser-cut PMMA (Acrylic)</strong> plates. PMMA was chosen because it provides 20% higher torque resistance compared to PLA and ensures better dimensional stability under repeated reciprocating loads.
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-4 border rounded bg-light h-100">
-                        <h6>Tension Control</h6>
-                        <p class="text-muted small">A dedicated filament tension control mechanism utilizes Igus bearings (BB-604-B180-30-ES) and custom 3D printed springs for optimal performance.</p>
+
+                <!-- 2. Tension Control (Placeholder: Hubert) -->
+                <div class="col-md-6">
+                    <div class="p-4 border rounded shadow-sm h-100 bg-light">
+                        <img src="images/picture hubert.jpeg" alt="Tension control placeholder" class="img-fluid rounded mb-3 shadow-sm w-100" style="height: 300px; object-fit: cover;">
+                        <h5 class="fw-bold text-primary">Tension Control</h5>
+                        <p class="text-muted small text-start">
+                            A spring-loaded tensioner was selected over a dancer-arm system for its simplicity and robustness. It utilizes custom 3D printed springs and <strong>Igus bearings (BB-604-B180-30-ES)</strong> to maintain consistent filament pressure during high-speed rewinding.
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-4 border rounded bg-light h-100">
-                        <h6>ATU Makerspace</h6>
-                        <p class="text-muted small">Iterative testing and fabrication were heavily supported by the ATU Makerspace equipment, allowing us to test and fix gear alignment issues swiftly.</p>
+            </div>
+
+            <!-- Rij 2: Makerspace samenvatting eronder -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="p-4 border rounded shadow-sm bg-dark text-white">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="fw-bold text-primary">Fabrication at ATU Makerspace</h4>
+                                <p class="small mb-0">
+                                    Our iterative testing process was heavily supported by the <strong>ATU Makerspace</strong> equipment. Prototyping revealed that laser-cutting 3mm gear teeth provided superior concentricity and lower noise compared to earlier 3D-printed iterations. dit stelde ons in staat om uitlijningsfouten snel te corrigeren voor de definitieve assemblage.
+                                </p>
+                            </div>
+                            <div class="col-md-4 text-center mt-3 mt-md-0">
+                                <span class="badge bg-primary p-2">Laser Cutting</span>
+                                <span class="badge bg-primary p-2">3D Printing</span>
+                                <span class="badge bg-primary p-2">Rapid Iteration</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
